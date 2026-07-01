@@ -1,0 +1,908 @@
+/* ===================================== */
+/* RESET */
+/* ===================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    width:100%;
+    height:100vh;
+
+    overflow:hidden;
+
+    font-family:'Poppins',sans-serif;
+
+    background:
+    radial-gradient(circle at top,
+    #122c64 0%,
+    #132969 35%,
+    #0e192f 70%,
+    #0a1327 100%);
+
+    color:white;
+}
+
+/* ===================================== */
+/* SKY */
+/* ===================================== */
+
+.sky{
+
+    position:relative;
+
+    width:100%;
+    height:100vh;
+
+    overflow:hidden;
+}
+
+/* ===================================== */
+/* MOON */
+/* ===================================== */
+
+.moon{
+
+    position:absolute;
+
+    top:60px;
+    right:90px;
+
+    width:120px;
+    height:120px;
+
+    border-radius:50%;
+
+    background:#dddfb7;
+
+    box-shadow:
+    0 0 25px rgba(255,255,255,.35);
+}
+
+/* Moon Glow */
+
+.moon::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-25px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(circle,
+    rgba(255,255,255,.18),
+    transparent 70%);
+
+}
+
+/* ===================================== */
+/* BACK BUTTON */
+/* ===================================== */
+
+.back-btn{
+
+    position:fixed;
+
+    top:25px;
+    left:25px;
+
+    padding:12px 28px;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:17px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    z-index:99999;
+
+    transition:.35s;
+}
+
+.back-btn:hover{
+
+    background:rgba(255,255,255,.18);
+
+    transform:translateY(-2px);
+}
+
+/* ===================================== */
+/* INTRO */
+/* ===================================== */
+
+.intro{
+
+    position:absolute;
+
+    width:100%;
+
+    top:90px;
+
+    text-align:center;
+
+    z-index:100;
+}
+
+.intro h1{
+
+    font-size:60px;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    margin-bottom:18px;
+
+    color:#ffffff;
+}
+
+.intro p{
+
+    font-size:20px;
+
+    color:#d9e4ff;
+
+    line-height:1.8;
+}
+/* ===================================== */
+/* MOVING CLOUDS */
+/* ===================================== */
+
+.cloud{
+
+    position:absolute;
+
+    width:230px;
+    height:65px;
+
+    background:rgba(255,255,255,.06);
+
+    border-radius:60px;
+
+    filter:blur(2px);
+}
+
+.cloud::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:90px;
+    height:90px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.06);
+
+    top:-30px;
+    left:35px;
+}
+
+.cloud::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:80px;
+    height:80px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.06);
+
+    top:-20px;
+    right:35px;
+}
+
+.cloud1{
+
+    top:120px;
+    left:-280px;
+
+    animation:cloudMove 45s linear infinite;
+}
+
+.cloud2{
+
+    top:250px;
+    left:-500px;
+
+    animation:cloudMove 60s linear infinite;
+}
+
+.cloud3{
+
+    top:430px;
+    left:-380px;
+
+    animation:cloudMove 52s linear infinite;
+}
+
+@keyframes cloudMove{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(1800px);
+
+    }
+
+}
+
+/* ===================================== */
+/* TWINKLING STARS */
+/* ===================================== */
+
+.star{
+
+    position:absolute;
+
+    width:4px;
+    height:4px;
+
+    background:white;
+
+    border-radius:50%;
+
+    opacity:.5;
+
+    animation:twinkle 3s ease-in-out infinite;
+}
+
+@keyframes twinkle{
+
+    0%,100%{
+
+        opacity:.3;
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:scale(2);
+
+    }
+
+}
+
+/* Star Positions */
+
+.s1{top:8%;left:8%;}
+.s2{top:12%;left:22%;}
+.s3{top:16%;left:36%;}
+.s4{top:10%;left:52%;}
+.s5{top:18%;left:68%;}
+.s6{top:14%;left:84%;}
+
+.s7{top:28%;left:12%;}
+.s8{top:32%;left:28%;}
+.s9{top:26%;left:48%;}
+.s10{top:36%;left:72%;}
+.s11{top:30%;left:90%;}
+
+.s12{top:50%;left:8%;}
+
+/* ===================================== */
+/* SHOOTING STAR */
+/* ===================================== */
+
+#shootingStar{
+
+    position:absolute;
+
+    left:-120px;
+
+    top:80px;
+
+    font-size:50px;
+
+    cursor:pointer;
+
+    z-index:999;
+
+    user-select:none;
+
+    transition:
+    transform .3s,
+    filter .3s;
+
+    animation:shootStar 10s ease-in-out infinite;
+}
+
+/* Glow */
+
+#shootingStar:hover{
+
+    transform:scale(1.15);
+
+    filter:drop-shadow(0 0 10px rgba(255,255,255,.6));
+
+}
+
+/* Tail */
+
+#shootingStar::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-110px;
+
+    top:22px;
+
+    width:100px;
+
+    height:2px;
+
+    background:linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,.8));
+
+    pointer-events:none;
+
+}
+
+/* Fast Start → Slow End */
+
+@keyframes shootStar{
+
+    0%{
+
+        left:-120px;
+
+        top:60px;
+
+        opacity:0;
+
+    }
+
+    15%{
+
+        left:20%;
+
+        top:100px;
+
+        opacity:1;
+
+    }
+
+    35%{
+
+        left:40%;
+
+        top:150px;
+
+    }
+
+    55%{
+
+        left:58%;
+
+        top:210px;
+
+    }
+
+    75%{
+
+        left:70%;
+
+        top:270px;
+
+    }
+
+    100%{
+
+        left:78%;
+
+        top:320px;
+
+        opacity:1;
+
+    }
+
+}
+/* ===================================== */
+/* WISH POPUP */
+/* ===================================== */
+
+#wishPopup{
+
+    position:fixed;
+
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.55);
+
+    backdrop-filter:blur(8px);
+
+    z-index:99999;
+}
+
+.popup{
+
+    width:500px;
+
+    max-width:90%;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    text-align:center;
+
+    animation:popupShow .5s ease;
+}
+
+.popup h2{
+
+    font-size:34px;
+
+    margin-bottom:25px;
+
+    color:white;
+}
+
+/* ===================================== */
+/* TEXT AREA */
+/* ===================================== */
+
+#wishInput{
+
+    width:100%;
+
+    height:150px;
+
+    resize:none;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:18px;
+
+    padding:18px;
+
+    font-size:18px;
+
+    color:white;
+
+    background:rgba(255,255,255,.10);
+
+    margin-bottom:25px;
+}
+
+#wishInput::placeholder{
+
+    color:#d8e3ff;
+}
+
+/* ===================================== */
+/* BUTTON */
+/* ===================================== */
+
+#sendWish{
+
+    padding:14px 35px;
+
+    border:none;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    color:white;
+
+    background:linear-gradient(
+    45deg,
+    #5b7cff,
+    #8f6dff);
+
+    transition:.3s;
+}
+
+#sendWish:hover{
+
+    transform:translateY(-3px);
+
+    background:linear-gradient(
+    45deg,
+    #6c8bff,
+    #9b7cff);
+}
+
+#sendWish:active{
+
+    transform:scale(.96);
+}
+
+/* ===================================== */
+/* FINAL MESSAGE */
+/* ===================================== */
+
+#finalMessage{
+
+    display:none;
+
+    position:fixed;
+
+    left:50%;
+
+    top:72%;
+
+    transform:translate(-50%,-50%);
+
+    width:85%;
+
+    max-width:720px;
+
+    text-align:center;
+
+    z-index:99999;
+
+    animation:messageFade 1.5s ease;
+}
+
+#finalMessage h2{
+
+    font-size:50px;
+
+    margin-bottom:15px;
+}
+
+#messageText{
+
+    font-size:24px;
+
+    color:#edf2ff;
+
+    line-height:1.8;
+}
+
+/* ===================================== */
+/* ANIMATIONS */
+/* ===================================== */
+
+@keyframes popupShow{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.75);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+@keyframes messageFade{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translate(-50%,-20%);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translate(-50%,-50%);
+
+    }
+
+}
+/* ===================================== */
+/* STAR FLY AWAY */
+/* ===================================== */
+
+.flyAway{
+
+    animation:flyAway 2s ease-in forwards !important;
+}
+
+@keyframes flyAway{
+
+    0%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        left:120%;
+
+        top:500px;
+
+        transform:scale(.5);
+
+        opacity:0;
+
+    }
+
+}
+
+/* ===================================== */
+/* SPARKLES */
+/* ===================================== */
+
+.sparkle{
+
+    position:absolute;
+
+    color:white;
+
+    pointer-events:none;
+
+    animation:sparkleFloat 2s linear forwards;
+}
+
+@keyframes sparkleFloat{
+
+    0%{
+
+        opacity:1;
+
+        transform:
+        translateY(0)
+        scale(.6);
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:
+        translateY(-140px)
+        scale(2);
+
+    }
+
+}
+
+/* ===================================== */
+/* SHOOTING STAR CLICK EFFECT */
+/* ===================================== */
+
+#shootingStar:active{
+
+    transform:scale(.90);
+
+}
+
+/* ===================================== */
+/* SMOOTH TRANSITIONS */
+/* ===================================== */
+
+.popup,
+#sendWish,
+.back-btn,
+#shootingStar{
+
+    transition:all .35s ease;
+
+}
+
+/* ===================================== */
+/* RESPONSIVE */
+/* ===================================== */
+
+@media(max-width:768px){
+
+    .intro h1{
+
+        font-size:42px;
+
+    }
+
+    .intro p{
+
+        font-size:17px;
+
+    }
+
+    .moon{
+
+        width:90px;
+        height:90px;
+
+        right:30px;
+
+    }
+
+    .popup{
+
+        width:92%;
+
+        padding:25px;
+
+    }
+
+    #wishInput{
+
+        height:120px;
+
+    }
+
+    #messageText{
+
+        font-size:19px;
+
+    }
+
+    #shootingStar{
+
+        font-size:40px;
+
+    }
+
+}
+
+/* ===================================== */
+/* OPTIONAL GLOW PULSE */
+/* ===================================== */
+
+@keyframes softGlow{
+
+    0%,100%{
+
+        filter:drop-shadow(0 0 5px rgba(255,255,255,.2));
+
+    }
+
+    50%{
+
+        filter:drop-shadow(0 0 12px rgba(255,255,255,.5));
+
+    }
+
+}
+
+#shootingStar{
+
+    animation:
+    shootStar 10s ease-in-out infinite,
+    softGlow 2.5s ease-in-out infinite;
+
+}
+@keyframes moonBreath{
+
+0%,100%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.05);
+}
+
+}
+
+.moon{
+animation:moonBreath 4s ease-in-out infinite;
+}
+
+
+@keyframes galaxyMove{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+
+}
+.cloud1{
+    animation:cloudMove 45s linear infinite;
+}
+
+.cloud2{
+    animation:cloudMove 60s linear infinite;
+}
+
+.cloud3{
+    animation:cloudMove 75s linear infinite;
+}
+.spark{
+
+    position:absolute;
+
+    width:3px;
+    height:3px;
+
+    background:white;
+
+    border-radius:50%;
+
+    animation:floatSpark 10s linear infinite;
+}
+
+@keyframes floatSpark{
+
+    from{
+
+        transform:
+        translateY(100vh);
+
+        opacity:0;
+
+    }
+
+    20%{
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:
+        translateY(-100px);
+
+        opacity:0;
+
+    }
+
+}

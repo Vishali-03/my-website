@@ -1,0 +1,873 @@
+/* ==========================================
+   GOOGLE FONTS
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Caveat:wght@400;700&display=swap');
+
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+}
+
+/* ==========================================
+   BODY
+========================================== */
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+
+    overflow:hidden;
+    position:relative;
+
+    background:linear-gradient(
+        135deg,
+        #5691a8,
+        #b55c9a,
+        #477598
+    );
+
+}
+/* ==========================================
+   BACKGROUND ANIMATION
+========================================== */
+
+@keyframes bgMove{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+
+}
+
+/* ==========================================
+   SPARKLES
+========================================== */
+
+.background{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-10;
+
+    overflow:hidden;
+
+}
+
+.background::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+    radial-gradient(rgba(255,255,255,.9) 1px,transparent 1px);
+
+    background-size:90px 90px;
+
+    opacity:.35;
+
+    animation:twinkle 5s ease-in-out infinite;
+
+}
+
+@keyframes twinkle{
+
+    0%,100%{
+
+        opacity:.15;
+
+    }
+
+    50%{
+
+        opacity:.45;
+
+    }
+
+}
+
+/* ==========================================
+   PASTEL GLOW
+========================================== */
+
+.background::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:650px;
+
+    height:650px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+
+        rgba(255,190,220,.35),
+
+        transparent 70%
+
+    );
+
+    top:-200px;
+
+    right:-180px;
+
+    filter:blur(100px);
+
+}
+
+/* ==========================================
+   BACK BUTTON
+========================================== */
+
+.back-btn{
+
+    position:fixed;
+
+    top:22px;
+
+    left:22px;
+
+    padding:10px 24px;
+
+    background:#333;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    transition:.35s;
+
+    z-index:100;
+
+}
+
+.back-btn:hover{
+
+    background:#111;
+
+    transform:translateY(-3px);
+
+}
+
+/* ==========================================
+   TITLE
+========================================== */
+
+.title{
+
+    font-family:'Caveat',cursive;
+
+    font-size:60px;
+
+    color:#362c3b;
+
+    margin-bottom:30px;
+
+    text-shadow:
+
+        0 5px 18px rgba(125, 123, 123, 0.7);
+
+    animation:titleFloat 4s ease-in-out infinite;
+
+}
+
+@keyframes titleFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-6px);
+
+    }
+
+}
+/* ==========================================
+   DIARY BOOK
+========================================== */
+
+.diary{
+
+    position:relative;
+
+    width:760px;
+
+    height:500px;
+
+    background:#fffdf8;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.18),
+        0 8px 25px rgba(255,182,193,.20);
+
+    border:2px solid rgba(255,255,255,.6);
+
+}
+
+/* ==========================================
+   BOOK SPINE
+========================================== */
+
+.diary::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:35px;
+
+    height:100%;
+
+    background:linear-gradient(
+        to right,
+        #d7b084,
+        #f7d8b2,
+        #ddb68a
+    );
+
+    box-shadow:
+        inset -3px 0 6px rgba(0,0,0,.12);
+
+}
+
+/* ==========================================
+   PAPER PAGE
+========================================== */
+
+.page{
+
+    position:absolute;
+
+    inset:18px 18px 18px 45px;
+
+    background:#fdf2da;
+
+    border-radius:18px;
+
+    display:none;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:45px;
+
+    box-shadow:
+        inset 0 0 10px rgba(0,0,0,.05);
+
+    animation:pageOpen .5s ease;
+
+}
+
+/* Active */
+
+.page.active{
+
+    display:flex;
+
+}
+
+@keyframes pageOpen{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(30px) rotate(-2deg);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0) rotate(0);
+
+    }
+
+}
+
+/* ==========================================
+   PAPER LINES
+========================================== */
+
+.page{
+
+    background-image:
+    repeating-linear-gradient(
+
+        to bottom,
+
+        transparent 0,
+
+        transparent 31px,
+
+        rgba(170,170,170,.15) 32px,
+
+        transparent 33px
+
+    );
+
+}
+
+/* ==========================================
+   TORN PAPER
+========================================== */
+
+.page::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:100%;
+
+    height:18px;
+
+    background:
+    radial-gradient(circle at 10px -5px,
+    transparent 12px,
+    #FFFCF5 13px);
+
+    background-size:30px 20px;
+
+}
+
+/* ==========================================
+   WASHI TAPE
+========================================== */
+
+.page::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:18px;
+
+    left:50%;
+
+    transform:translateX(-50%) rotate(-3deg);
+
+    width:110px;
+
+    height:28px;
+
+    background:rgba(255,238,170,.6);
+
+    border-radius:4px;
+
+}
+
+/* ==========================================
+   TEXT
+========================================== */
+
+.page h1{
+
+    font-family:'Caveat',cursive;
+
+    font-size:58px;
+
+    color:#6A506B;
+
+    margin-bottom:10px;
+
+}
+
+.page h2{
+
+    font-family:'Caveat',cursive;
+
+    font-size:44px;
+
+    color:#ca607e;
+
+    margin-bottom:18px;
+
+}
+
+.page h3{
+
+    font-size:22px;
+
+    color:#7A6A60;
+
+    margin-top:12px;
+
+}
+
+.page p{
+
+    font-family:'Caveat',cursive;
+
+    font-size:24px;
+
+    line-height:1.8;
+
+    color:#555;
+
+    max-width:520px;
+
+}
+
+.page ul{
+
+    list-style:none;
+
+    margin-top:10px;
+
+}
+
+.page li{
+
+    font-family:'Caveat',cursive;
+
+    font-size:24px;
+
+    margin:14px 0;
+
+    color:#666;
+
+}
+/* ==========================================
+   POLAROID PHOTO
+========================================== */
+
+.page .polaroid{
+
+    position:absolute;
+
+    top:25px;
+
+    right:35px;
+
+    width:95px;
+
+    background:#fff;
+
+    padding:8px 8px 20px;
+
+    border-radius:4px;
+
+    transform:rotate(8deg);
+
+    box-shadow:
+    0 8px 18px rgba(0,0,0,.15);
+
+}
+
+.page .polaroid img{
+
+    width:100%;
+
+    border-radius:3px;
+
+    display:block;
+
+}
+
+.page .polaroid p{
+
+    font-size:13px;
+
+    margin-top:6px;
+
+    text-align:center;
+
+    font-family:'Caveat',cursive;
+
+    color:#666;
+
+}
+
+/* ==========================================
+   FLOWER STICKER
+========================================== */
+
+.page .flower{
+
+    position:absolute;
+
+    left:35px;
+
+    bottom:35px;
+
+    font-size:42px;
+
+    transform:rotate(-18deg);
+
+}
+
+/* ==========================================
+   COFFEE STAIN
+========================================== */
+
+.page .coffee{
+
+    position:absolute;
+
+    top:70px;
+
+    left:60px;
+
+    width:70px;
+
+    height:70px;
+
+    border:4px solid rgba(130,85,45,.15);
+
+    border-radius:50%;
+
+}
+
+.page .coffee::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:48px;
+
+    height:48px;
+
+    border:4px solid rgba(130,85,45,.12);
+
+    border-radius:50%;
+
+    top:7px;
+
+    left:7px;
+
+}
+
+/* ==========================================
+   CONTROLS
+========================================== */
+
+.controls{
+
+    margin-top:28px;
+
+    display:flex;
+
+    gap:18px;
+
+}
+
+.controls button{
+
+    padding:13px 32px;
+
+    border:none;
+
+    border-radius:40px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:white;
+
+    background:linear-gradient(
+        135deg,
+        #c62558,
+        #c06082
+    );
+
+    box-shadow:
+    0 10px 25px rgba(255,150,190,.30);
+
+    transition:.35s;
+
+}
+
+.controls button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 18px 35px rgba(255,150,190,.40);
+
+}
+
+.controls button:disabled{
+
+    opacity:.4;
+
+    cursor:not-allowed;
+
+}
+
+/* ==========================================
+   DIARY HOVER
+========================================== */
+
+.diary{
+
+    transition:.4s;
+
+}
+
+.diary:hover{
+
+    transform:scale(1.015);
+
+}
+
+/* ==========================================
+   PAGE NUMBER
+========================================== */
+
+.page-number{
+
+    position:absolute;
+
+    bottom:18px;
+
+    right:30px;
+
+    font-size:14px;
+
+    color:#999;
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+    .title{
+
+        font-size:42px;
+
+    }
+
+    .diary{
+
+        width:92%;
+
+        height:500px;
+
+    }
+
+    .page{
+
+        inset:15px 15px 15px 42px;
+
+        padding:28px;
+
+    }
+
+    .page h1{
+
+        font-size:42px;
+
+    }
+
+    .page h2{
+
+        font-size:34px;
+
+    }
+
+    .page p{
+
+        font-size:20px;
+
+    }
+
+    .page li{
+
+        font-size:20px;
+
+    }
+
+    .polaroid{
+
+        width:75px !important;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .title{
+
+        font-size:34px;
+
+    }
+
+    .diary{
+
+        height:470px;
+
+    }
+
+    .page{
+
+        padding:22px;
+
+    }
+
+    .page h2{
+
+        font-size:28px;
+
+    }
+
+    .page p{
+
+        font-size:18px;
+
+    }
+
+    .page li{
+
+        font-size:18px;
+
+    }
+
+    .controls{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .controls button{
+
+        width:170px;
+
+    }
+
+}
+
+/* ==========================================
+   PAGE ENTRY
+========================================== */
+
+@keyframes bookEntry{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px) scale(.95);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0) scale(1);
+
+    }
+
+}
+
+.diary{
+
+    animation:bookEntry .8s ease;
+
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#F6A9C5;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#FFF4F8;
+
+}
+
+/* ==========================================
+   TEXT SELECTION
+========================================== */
+
+::selection{
+
+    background:#FFC6DA;
+
+    color:#fff;
+
+}

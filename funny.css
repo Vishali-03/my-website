@@ -1,0 +1,352 @@
+body{
+
+    margin:0;
+
+    min-height:100vh;
+
+    font-family:Poppins,sans-serif;
+
+    background:
+    linear-gradient(135deg,
+    #11152e,
+    #4a2f74,
+    #11152e);
+
+    color:white;
+
+    text-align:center;
+
+    overflow-x:hidden;
+}
+
+h1{
+
+    margin-top:40px;
+
+    font-size:55px;
+
+    animation:bounce 2s infinite;
+}
+
+p{
+
+    font-size:22px;
+
+    color:#f8f2f7;
+}
+
+
+.back{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+    padding: 12px 25px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    color: white;
+
+    background: rgba(255,255,255,0.15);
+
+    z-index: 9999;
+
+    cursor: pointer;
+}
+.gallery{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+    margin-top:40px;
+}
+.gallery img{
+
+    width:250px;
+    height:320px;
+
+    object-fit:cover;
+
+    border-radius:25px;
+
+    transition:0.4s;
+
+    box-shadow:0 0 20px rgba(255,255,255,0.2);
+}
+
+/* Photo 1 */
+
+.gallery img:nth-child(1){
+
+    animation:bounce1 3s ease-in-out infinite;
+}
+
+/* Photo 2 */
+
+.gallery img:nth-child(2){
+
+    animation:bounce2 2.5s ease-in-out infinite;
+}
+
+/* Photo 3 */
+
+.gallery img:nth-child(3){
+
+    animation:bounce3 3.5s ease-in-out infinite;
+}
+
+/* Bounce 1 */
+
+@keyframes bounce1{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-25px);
+    }
+}
+
+/* Bounce 2 */
+
+@keyframes bounce2{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    25%{
+        transform:translateY(-10px);
+    }
+
+    50%{
+        transform:translateY(-20px);
+    }
+
+    75%{
+        transform:translateY(-10px);
+    }
+}
+@keyframes bounce3{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-25px);
+    }
+}
+
+.videos{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+    margin-top:50px;
+}
+
+video{
+
+    width:200px;
+    height:600px;
+
+    border-radius:25px;
+}
+
+@keyframes float{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-20px);
+    }
+}
+
+@keyframes bounce{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+}
+.laugh{
+
+    position:absolute;
+
+    pointer-events:none;
+
+    font-size:25px;
+
+    animation:laughMove 1s forwards;
+}
+
+@keyframes laughMove{
+
+    from{
+        opacity:1;
+        transform:translate(-50%,-50%);
+    }
+
+    to{
+        opacity:0;
+        transform:
+        translate(-50%,-100px)
+        rotate(360deg);
+    }
+}
+
+
+body{
+    margin:0;
+    min-height:100vh;
+
+    background: linear-gradient(
+        -45deg,
+        #5f85a3,
+        #b05b8e,
+        #6b5491,
+        #bc66af
+    );
+
+    background-size:400% 400%;
+
+    animation:bgMove 10s ease infinite;
+
+    font-family:Poppins,sans-serif;
+
+    overflow-x:hidden;
+
+    color:white;
+}
+
+@keyframes bgMove{
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+}
+h1{
+    font-size:60px;
+
+    animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+}
+.gallery img:nth-child(1){
+    transform:rotate(-8deg);
+}
+
+.gallery img:nth-child(2){
+    transform:rotate(8deg);
+}
+
+.gallery img:nth-child(3){
+    transform:rotate(-5deg);
+}
+
+.gallery img:hover{
+
+  transform:scale(1.08);
+
+    box-shadow:
+    0 0 15px rgba(255,255,255,0.3),
+    0 0 20px rgba(255,192,203,0.4);
+}
+.videos{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+    margin-top:50px;
+}
+
+.videos video{
+
+    width:250px;
+
+    height:500px;
+
+    object-fit:cover;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 0 15px rgba(255,255,255,0.15);
+
+    animation:bounceVideo 3s ease-in-out infinite;
+
+    transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+/* Second video different speed */
+
+.videos video:nth-child(2){
+
+    animation-duration:4s;
+}
+
+/* Hover effect */
+
+.videos video:hover{
+
+    transform:scale(1.04);
+
+    box-shadow:
+    0 0 15px rgba(255,255,255,0.25),
+    0 0 20px rgba(255,192,203,0.3);
+}
+
+/* Bounce animation */
+
+@keyframes bounceVideo{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+}

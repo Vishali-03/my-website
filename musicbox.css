@@ -1,0 +1,931 @@
+/* =========================================
+   GOOGLE FONT
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Great+Vibes&family=Poppins:wght@300;400;500&display=swap');
+
+/* =========================================
+   RESET
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+
+    width:100%;
+    height:100%;
+
+}
+
+body{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+
+    font-family:'Poppins',sans-serif;
+
+    background:
+    radial-gradient(circle at top,#720a5e,#5d194e 85%);
+
+    position:relative;
+
+}
+
+/* =========================================
+   WOOD BACKGROUND
+========================================= */
+
+.background{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    repeating-linear-gradient(
+        90deg,
+        rgba(255,255,255,.02) 0px,
+        rgba(255,255,255,.02) 2px,
+        transparent 2px,
+        transparent 140px
+    );
+
+    opacity:.18;
+
+}
+
+/* =========================================
+   STARS
+========================================= */
+
+.stars{
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+    radial-gradient(#ffffff66 1px,transparent 1px);
+
+    background-size:90px 90px;
+
+    opacity:.25;
+
+}
+
+/* =========================================
+   GOLDEN LIGHT
+========================================= */
+
+body::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:900px;
+
+    height:900px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+        rgba(255,210,120,.18),
+        transparent 70%
+    );
+
+    filter:blur(60px);
+
+    animation:glow 7s ease-in-out infinite;
+
+}
+
+@keyframes glow{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.1);
+
+    }
+
+}
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.back-btn{
+
+    position:fixed;
+
+    top:25px;
+
+    left:25px;
+
+    text-decoration:none;
+
+    color:white;
+
+    padding:13px 28px;
+
+    border-radius:40px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(10px);
+
+    transition:.35s;
+
+    z-index:100;
+
+}
+
+.back-btn:hover{
+
+    transform:translateY(-3px);
+
+    background:rgba(255,255,255,.18);
+
+}
+
+/* =========================================
+   MUSIC BOX
+========================================= */
+
+.music-box{
+
+    width:780px;
+
+    height:700px;
+
+    border-radius:26px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    background:
+    linear-gradient(
+        180deg,
+        #5f35a8a3,
+        #463b80
+    );
+
+    box-shadow:
+        0 35px 80px rgba(0,0,0,.5);
+
+    animation:boxOpen 1.2s ease;
+
+}
+
+/* =========================================
+   OPEN ANIMATION
+========================================= */
+
+@keyframes boxOpen{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(40px)
+        scale(.9);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0)
+        scale(1);
+
+    }
+
+}
+
+/* =========================================
+   LID
+========================================= */
+
+.lid{
+
+    height:160px;
+
+    background:
+    linear-gradient(
+        180deg,
+        #220b76,
+        #363a71e7
+    );
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-bottom:3px solid rgba(255,255,255,.08);
+
+}
+
+.lid h1{
+
+    color:#fbf6fb;
+
+    font-size:48px;
+
+    font-family:'Great Vibes',cursive;
+
+}
+
+.lid p{
+
+    margin-top:10px;
+
+    color:#f8e7c6;
+
+    font-size:17px;
+
+    letter-spacing:1px;
+
+}
+/* =========================================
+   INSIDE BOX
+========================================= */
+
+.inside{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    padding:35px;
+
+}
+
+/* =========================================
+   VINYL AREA
+========================================= */
+
+.vinyl-area{
+
+    width:170px;
+
+    height:170px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+}
+
+/* =========================================
+   VINYL RECORD
+========================================= */
+
+.vinyl{
+
+    width:160px;
+
+    height:160px;
+
+    border-radius:50%;
+
+    position:relative;
+
+    background:
+    radial-gradient(circle,#111 28%,#222 29%,#000 100%);
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.45);
+
+    transition:.4s;
+
+}
+
+/* Rotates only while playing */
+
+.vinyl.playing{
+
+    animation:spin 4s linear infinite;
+
+}
+
+@keyframes spin{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* =========================================
+   VINYL CENTER
+========================================= */
+
+.center{
+
+    position:absolute;
+
+    width:38px;
+
+    height:38px;
+
+    background:#c1b050;
+
+    border-radius:50%;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    border:4px solid #fff6d8;
+
+}
+
+/* =========================================
+   SONG BUTTONS
+========================================= */
+
+.songs{
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:14px;
+
+    margin-top:10px;
+
+}
+
+.song{
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    padding:16px;
+
+    border-radius:14px;
+
+    font-size:16px;
+
+    color:#fff;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(12px);
+
+    transition:.35s;
+
+}
+
+.song:hover{
+
+    transform:translateY(-4px);
+
+    background:rgba(255,255,255,.16);
+
+}
+
+.song.active{
+
+    background:#6fb1e7;
+
+    color:#2d1709;
+
+    font-weight:bold;
+
+    box-shadow:
+
+    0 0 18px rgba(255,215,130,.45);
+
+}
+
+/* =========================================
+   PLAYER CONTROLS
+========================================= */
+
+.controls{
+
+    margin-top:28px;
+
+    display:flex;
+
+    gap:18px;
+
+}
+
+.controls button{
+
+    width:56px;
+
+    height:56px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    font-size:22px;
+
+    color:white;
+
+    background:rgba(255,255,255,.10);
+
+    backdrop-filter:blur(10px);
+
+    transition:.3s;
+
+}
+
+.controls button:hover{
+
+    transform:scale(1.12);
+
+    background:rgba(255,255,255,.20);
+
+}
+
+/* =========================================
+   PROGRESS BAR
+========================================= */
+
+.progress{
+
+    width:100%;
+
+    height:8px;
+
+    margin-top:30px;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    background:rgba(255,255,255,.10);
+
+}
+
+.progress-bar{
+
+    width:0%;
+
+    height:100%;
+
+    border-radius:20px;
+
+    background:linear-gradient(
+        90deg,
+        #ffd67a,
+        #ffb347
+    );
+
+    transition:.2s;
+
+}
+
+/* =========================================
+   QUOTE
+========================================= */
+
+.quote{
+
+    margin-top:25px;
+
+    text-align:center;
+
+    color:#ffe7bc;
+
+    font-size:17px;
+
+    font-style:italic;
+
+    line-height:28px;
+
+}
+/* =========================================
+   FLOATING PARTICLES
+========================================= */
+
+.particles{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+}
+
+.particles span{
+
+    position:absolute;
+
+    width:5px;
+
+    height:5px;
+
+    border-radius:50%;
+
+    background:#ffd56a;
+
+    box-shadow:
+        0 0 10px #ffd56a,
+        0 0 20px #ffd56a;
+
+    animation:particleFloat linear infinite;
+
+}
+
+@keyframes particleFloat{
+
+    0%{
+
+        transform:
+        translateY(100vh)
+        scale(.4);
+
+        opacity:0;
+
+    }
+
+    20%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:
+        translateY(-120px)
+        scale(1);
+
+        opacity:0;
+
+    }
+
+}
+
+/* =========================================
+   MUSIC BOX HOVER
+========================================= */
+
+.music-box{
+
+    transition:
+    transform .45s ease,
+    box-shadow .45s ease;
+
+}
+
+.music-box:hover{
+
+    transform:
+    translateY(-6px);
+
+    box-shadow:
+    0 45px 90px rgba(0,0,0,.6),
+    0 0 40px rgba(255,220,120,.12);
+
+}
+
+/* =========================================
+   WOOD SHINE
+========================================= */
+
+.music-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:80%;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+        120deg,
+
+        transparent,
+
+        rgba(255,255,255,.08),
+
+        transparent
+
+    );
+
+    animation:shine 8s linear infinite;
+
+}
+
+@keyframes shine{
+
+    from{
+
+        left:-100%;
+
+    }
+
+    to{
+
+        left:130%;
+
+    }
+
+}
+
+/* =========================================
+   LID GLOW
+========================================= */
+
+.lid{
+
+    box-shadow:
+
+    inset 0 -10px 20px rgba(0,0,0,.18);
+
+}
+
+/* =========================================
+   SONG HOVER EFFECT
+========================================= */
+
+.song{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.song::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:-120%;
+
+    top:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.18),
+
+        transparent
+
+    );
+
+    transition:.6s;
+
+}
+
+.song:hover::after{
+
+    left:120%;
+
+}
+
+/* =========================================
+   PLAY BUTTON SPECIAL
+========================================= */
+
+#play{
+
+    background:#d49a3d;
+
+    color:#2b180b;
+
+    font-weight:bold;
+
+}
+
+#play:hover{
+
+    transform:
+    scale(1.18);
+
+    box-shadow:
+
+    0 0 20px rgba(255,210,120,.6);
+
+}
+
+/* =========================================
+   QUOTE ANIMATION
+========================================= */
+
+.quote{
+
+    animation:fadeIn 1.2s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(12px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#8a5b2d;
+
+    border-radius:10px;
+
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:768px){
+
+    .music-box{
+
+        width:94%;
+
+        height:auto;
+
+        padding-bottom:25px;
+
+    }
+
+    .lid{
+
+        height:130px;
+
+    }
+
+    .lid h1{
+
+        font-size:38px;
+
+    }
+
+    .lid p{
+
+        font-size:14px;
+
+    }
+
+    .vinyl{
+
+        width:120px;
+
+        height:120px;
+
+    }
+
+    .vinyl-area{
+
+        width:130px;
+
+        height:130px;
+
+    }
+
+    .songs{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .song{
+
+        font-size:15px;
+
+        padding:14px;
+
+    }
+
+    .controls{
+
+        gap:12px;
+
+    }
+
+    .controls button{
+
+        width:48px;
+
+        height:48px;
+
+        font-size:18px;
+
+    }
+
+    .quote{
+
+        font-size:15px;
+
+        line-height:24px;
+
+        padding:0 10px;
+
+    }
+
+    .back-btn{
+
+        padding:10px 18px;
+
+        font-size:14px;
+
+    }
+
+}
+
+/* =========================================
+   END
+========================================= */

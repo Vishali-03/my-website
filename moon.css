@@ -1,0 +1,541 @@
+/* ======================================
+   RESET
+====================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Georgia, 'Times New Roman', Times, serif;
+
+    overflow-x:hidden;
+
+    min-height:100vh;
+
+    background:
+    radial-gradient(circle at top right,
+        rgba(255,255,255,0.18),
+        transparent 35%),
+
+    radial-gradient(circle at bottom left,
+        rgba(180,220,255,0.15),
+        transparent 40%),
+
+    linear-gradient(
+        180deg,
+        #5E81C8 0%,
+        #7399D6 40%,
+        #8BB7E8 75%,
+        #A4CBEF 100%
+    );
+}
+
+/* ======================================
+   BACKGROUND
+====================================== */
+
+.background{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle at top right,
+    rgba(255,255,255,.18),
+    transparent 40%),
+
+    radial-gradient(circle at bottom left,
+    rgba(255,170,255,.15),
+    transparent 45%);
+
+    z-index:-2;
+
+}
+
+
+/* ======================================
+   CONTAINER
+====================================== */
+
+.container{
+
+    width:95%;
+
+    max-width:1400px;
+
+    margin:auto;
+
+    padding:50px 30px;
+
+}
+
+
+/* ======================================
+   TITLE
+====================================== */
+
+.container h1{
+
+    text-align: center;
+    
+    color:#ffffff;
+
+    font-size:45px;
+
+    font-weight:500;
+
+    text-shadow:none;
+
+}
+
+
+/* ======================================
+   SUBTITLE
+====================================== */
+
+.container p{
+
+    text-align:center;
+
+    color:#ececff;
+
+    margin-top:18px;
+
+    margin-bottom:55px;
+
+    font-size:25px;
+
+}
+
+
+/* ======================================
+   GALLERY GRID
+====================================== */
+
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:35px;
+
+}
+
+
+/* ======================================
+   RESPONSIVE
+====================================== */
+
+@media(max-width:1100px){
+
+.gallery{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:650px){
+
+.gallery{
+
+grid-template-columns:1fr;
+
+}
+
+.container h1{
+
+font-size:38px;
+
+}
+
+}
+/* ======================================
+   POLAROID CARD
+====================================== */
+
+.polaroid{
+
+    background:#ffffff;
+
+    padding:12px 12px 45px;
+
+    border-radius:10px;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.35);
+
+    transition:.45s ease;
+
+    cursor:pointer;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* Different rotations */
+
+.polaroid:nth-child(1){
+
+    transform:rotate(-6deg);
+
+}
+
+.polaroid:nth-child(2){
+
+    transform:rotate(5deg);
+
+}
+
+.polaroid:nth-child(3){
+
+    transform:rotate(-3deg);
+
+}
+
+.polaroid:nth-child(4){
+
+    transform:rotate(4deg);
+
+}
+
+.polaroid:nth-child(5){
+
+    transform:rotate(-5deg);
+
+}
+
+.polaroid:nth-child(6){
+
+    transform:rotate(3deg);
+
+}
+
+.polaroid:nth-child(7){
+
+    transform:rotate(-4deg);
+
+}
+
+.polaroid:nth-child(8){
+
+    transform:rotate(6deg);
+
+}
+
+
+/* Hover */
+
+.polaroid:hover{
+
+    transform:scale(1.08) rotate(0deg);
+
+    box-shadow:
+
+    0 20px 45px rgba(255,255,255,.15),
+
+    0 15px 35px rgba(0,0,0,.45);
+
+}
+
+
+/* ======================================
+   IMAGE
+====================================== */
+
+/*.polaroid img{
+
+    width:100%;
+
+    height:300px;
+
+    object-fit:cover;
+
+    border-radius:6px;
+
+}
+
+
+/* ======================================
+   VIDEO
+====================================== */
+
+/*.polaroid video{
+
+    width:100%;
+
+    height:300px;   /* Old: 240px */
+
+    /*object-fit:cover;
+
+    border-radius:6px;
+
+}*/
+.polaroid img,
+.polaroid video{
+
+    width:100%;
+
+    height:300px;
+
+    object-fit:cover;
+
+    border-radius:6px;
+
+    border:3px solid #2b2b2b;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.2);
+
+}
+
+/* ======================================
+   CAPTION
+====================================== */
+
+.polaroid span{
+
+    position:absolute;
+
+    left:0;
+
+    bottom:12px;
+
+    width:100%;
+
+    text-align:center;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    color:#555;
+
+}
+
+
+/* ======================================
+   BACK BUTTON
+====================================== */
+
+.backBtn{
+
+    display:inline-block;
+
+    margin-top:60px;
+
+    text-decoration:none;
+
+    color:white;
+
+    padding:16px 38px;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    transition:.35s;
+
+}
+
+.backBtn:hover{
+
+    background:#ffffff;
+
+    color:#4d52b8;
+
+    transform:translateY(-4px);
+
+}
+
+
+/* ======================================
+   FLOAT ANIMATION
+====================================== */
+
+@keyframes floatCard{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.polaroid{
+
+    animation:floatCard 5s ease-in-out infinite;
+
+}
+
+
+/* Different delays */
+
+.polaroid:nth-child(2){
+
+    animation-delay:.3s;
+
+}
+
+.polaroid:nth-child(3){
+
+    animation-delay:.6s;
+
+}
+
+.polaroid:nth-child(4){
+
+    animation-delay:.9s;
+
+}
+
+.polaroid:nth-child(5){
+
+    animation-delay:1.2s;
+
+}
+
+.polaroid:nth-child(6){
+
+    animation-delay:1.5s;
+
+}
+
+.polaroid:nth-child(7){
+
+    animation-delay:1.8s;
+
+}
+
+.polaroid:nth-child(8){
+
+    animation-delay:2.1s;
+
+}
+/* ======================================
+POPUP
+====================================== */
+
+.overlay{
+
+position:fixed;
+
+inset:0;
+
+background:rgba(0,0,0,.85);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+opacity:0;
+
+visibility:hidden;
+
+transition:.4s;
+
+z-index:999;
+
+backdrop-filter:blur(10px);
+
+}
+
+.overlay.show{
+
+opacity:1;
+
+visibility:visible;
+
+}
+
+.popup{
+
+width:600px;
+
+max-width:90%;
+
+background:white;
+
+padding:15px 15px 40px;
+
+border-radius:12px;
+
+animation:popup .35s ease;
+
+}
+
+.popup img,
+.popup video{
+
+width:100%;
+
+height:420px;
+
+object-fit:cover;
+
+border-radius:8px;
+
+}
+
+.popup span{
+
+display:block;
+
+margin-top:15px;
+
+text-align:center;
+
+font-size:20px;
+
+font-weight:600;
+
+color:#555;
+
+}
+
+@keyframes popup{
+
+from{
+
+transform:scale(.7);
+
+opacity:0;
+
+}
+
+to{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}

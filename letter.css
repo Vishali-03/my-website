@@ -1,0 +1,777 @@
+/* =========================================
+   GOOGLE FONTS
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&display=swap');
+
+/* =========================================
+   RESET
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+
+    width:100%;
+    height:100%;
+
+}
+
+body{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+
+    font-family:'Cormorant Garamond',serif;
+
+    background:
+    radial-gradient(circle at top,#714326,#83442b 85%);
+
+    position:relative;
+
+}
+
+/* =========================================
+   WOOD BACKGROUND
+========================================= */
+
+.background{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    repeating-linear-gradient(
+        90deg,
+        rgba(255,255,255,.02) 0px,
+        rgba(255,255,255,.02) 2px,
+        transparent 2px,
+        transparent 120px
+    );
+
+    opacity:.18;
+
+}
+
+/* =========================================
+   WARM LIGHT
+========================================= */
+
+.light{
+
+    position:absolute;
+
+    width:900px;
+
+    height:900px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+        rgba(255,220,150,.18),
+        transparent 70%
+    );
+
+    filter:blur(50px);
+
+    animation:lightMove 8s ease-in-out infinite;
+
+}
+
+@keyframes lightMove{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.1);
+
+    }
+
+}
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.back-btn{
+
+    position:fixed;
+
+    top:25px;
+
+    left:25px;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    padding:14px 28px;
+
+    border-radius:40px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(10px);
+
+    transition:.35s;
+
+    z-index:100;
+
+}
+
+.back-btn:hover{
+
+    transform:translateY(-3px);
+
+    background:rgba(255,255,255,.18);
+
+}
+
+/* =========================================
+   LETTER
+========================================= */
+
+.letter-card{
+
+    position:relative;
+
+    width:680px;
+
+    height:88vh;
+
+    max-height:860px;
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+    background:#f8efd9;
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.45);
+
+    animation:letterOpen 1.2s ease;
+
+}
+
+/* =========================================
+   OPEN ANIMATION
+========================================= */
+
+@keyframes letterOpen{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+        scale(.88)
+        rotate(-2deg);
+
+    }
+
+    70%{
+
+        opacity:1;
+
+        transform:
+        scale(1.02)
+        rotate(.5deg);
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:
+        scale(1)
+        rotate(0deg);
+
+    }
+
+}
+
+/* =========================================
+   PAPER TEXTURE
+========================================= */
+
+.letter-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+    radial-gradient(
+        rgba(80,60,30,.07) 1px,
+        transparent 1px
+    );
+
+    background-size:18px 18px;
+
+    pointer-events:none;
+
+}
+
+/* =========================================
+   INNER SHADOW
+========================================= */
+
+.letter-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+    box-shadow:
+    inset 0 0 40px rgba(70,40,15,.12);
+
+}
+
+/* =========================================
+   FEATHER
+========================================= */
+
+.feather{
+
+    position:absolute;
+
+    top:22px;
+
+    left:24px;
+
+    font-size:34px;
+
+    transform:rotate(-18deg);
+
+    animation:featherFloat 4s ease-in-out infinite;
+
+}
+
+@keyframes featherFloat{
+
+    0%,100%{
+
+        transform:
+        rotate(-18deg)
+        translateY(0);
+
+    }
+
+    50%{
+
+        transform:
+        rotate(-12deg)
+        translateY(-5px);
+
+    }
+
+}
+
+/* =========================================
+   COFFEE STAIN
+========================================= */
+
+.coffee{
+
+    position:absolute;
+
+    top:90px;
+
+    right:55px;
+
+    width:110px;
+
+    height:110px;
+
+    border-radius:50%;
+
+    border:8px solid rgba(120,70,35,.08);
+
+    opacity:.35;
+
+}
+/* =========================================
+   HEADING
+========================================= */
+
+h3{
+
+    margin-top:55px;
+
+    text-align:center;
+
+    font-family:'Cinzel',serif;
+
+    font-size:18px;
+
+    letter-spacing:5px;
+
+    color:#8a603b;
+
+    text-transform:uppercase;
+
+}
+
+/* =========================================
+   TITLE
+========================================= */
+
+h1{
+
+    margin-top:18px;
+
+    text-align:center;
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:72px;
+
+    font-weight:400;
+
+    color:#5d3116;
+
+    animation:titleFloat 4s ease-in-out infinite;
+
+}
+
+@keyframes titleFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-3px);
+
+    }
+
+}
+
+/* =========================================
+   LETTER BODY
+========================================= */
+
+.letter-body{
+
+    position:absolute;
+
+    top:180px;
+
+    left:0;
+
+    right:0;
+
+    bottom:25px;
+
+    overflow-y:auto;
+
+    padding:20px 70px 40px;
+
+    scroll-behavior:smooth;
+
+    scrollbar-width:none;
+
+}
+
+.letter-body::-webkit-scrollbar{
+
+    width:0;
+
+    display:none;
+
+}
+
+/* =========================================
+   LETTER TEXT
+========================================= */
+
+.letter-body p{
+
+    white-space:pre-line;
+
+    font-size:25px;
+
+    line-height:46px;
+
+    color:#473223;
+
+    letter-spacing:.3px;
+
+}
+
+/* =========================================
+   QUOTE
+========================================= */
+
+.quote{
+
+    margin-top:40px;
+
+    padding:20px;
+
+    text-align:center;
+
+    font-size:20px;
+
+    font-style:italic;
+
+    color:#693d12;
+
+    border-top:1px solid rgba(120,90,60,.18);
+
+    border-bottom:1px solid rgba(120,90,60,.18);
+
+}
+
+/* =========================================
+   SIGNATURE
+========================================= */
+
+.signature{
+
+    margin-top:40px;
+
+    text-align:right;
+
+    color:#5a3216;
+
+    font-size:30px;
+
+}
+
+.signature span{
+
+    display:inline-block;
+
+    margin-top:10px;
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:55px;
+
+    color:#b22222;
+
+    transition:.3s;
+
+}
+
+.signature span:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* =========================================
+   MUSIC BUTTON
+========================================= */
+
+#musicBtn{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:60px;
+
+    height:60px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    font-size:24px;
+
+    color:white;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+
+    transition:.35s;
+
+}
+
+#musicBtn:hover{
+
+    transform:scale(1.12) rotate(12deg);
+
+    background:rgba(255,255,255,.2);
+
+}
+/* =========================================
+   FLOATING PARTICLES
+========================================= */
+
+.particles{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+}
+
+.particles span{
+
+    position:absolute;
+
+    width:4px;
+
+    height:4px;
+
+    border-radius:50%;
+
+    background:#ffd978;
+
+    box-shadow:
+        0 0 8px #ffd978,
+        0 0 18px #ffd978;
+
+    animation:particleMove linear infinite;
+
+}
+
+@keyframes particleMove{
+
+    0%{
+
+        transform:
+        translateY(100vh);
+
+        opacity:0;
+
+    }
+
+    20%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:
+        translateY(-120px);
+
+        opacity:0;
+
+    }
+
+}
+
+/* =========================================
+   LETTER HOVER
+========================================= */
+
+.letter-card{
+
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
+
+}
+
+.letter-card:hover{
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 40px 90px rgba(0,0,0,.55);
+
+}
+
+/* =========================================
+   SCROLL FADE
+========================================= */
+
+.letter-body{
+
+    -webkit-mask-image:
+        linear-gradient(
+            to bottom,
+            transparent 0%,
+            black 4%,
+            black 96%,
+            transparent 100%
+        );
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            transparent 0%,
+            black 4%,
+            black 96%,
+            transparent 100%
+        );
+
+}
+
+/* =========================================
+   TEXT SELECTION
+========================================= */
+
+::selection{
+
+    background:#d9b56f;
+
+    color:#3a2516;
+
+}
+
+/* =========================================
+   SMOOTH ANIMATION
+========================================= */
+
+.signature{
+
+    animation:fadeUp 1.2s ease;
+
+}
+
+.quote{
+
+    animation:fadeUp 1s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:768px){
+
+    .letter-card{
+
+        width:94%;
+
+        height:92vh;
+
+    }
+
+    h1{
+
+        font-size:44px;
+
+    }
+
+    h3{
+
+        font-size:14px;
+
+        letter-spacing:2px;
+
+    }
+
+    .letter-body{
+
+        top:150px;
+
+        padding:20px 28px 30px;
+
+    }
+
+    .letter-body p{
+
+        font-size:19px;
+
+        line-height:34px;
+
+    }
+
+    .quote{
+
+        font-size:16px;
+
+    }
+
+    .signature{
+
+        font-size:22px;
+
+    }
+
+    .signature span{
+
+        font-size:36px;
+
+    }
+
+    .back-btn{
+
+        padding:10px 18px;
+
+        font-size:14px;
+
+    }
+
+    #musicBtn{
+
+        width:50px;
+
+        height:50px;
+
+        font-size:20px;
+
+    }
+
+}

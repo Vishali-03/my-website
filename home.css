@@ -1,0 +1,394 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+    font-family:'Poppins',sans-serif;
+
+    background:
+    radial-gradient(circle at top,#db7dc1 0%,#bc70cf 40%,#d271bb 100%);
+
+    position:relative;
+}
+
+/* STARS */
+
+body::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+
+    background-image:
+    radial-gradient(rgb(255, 255, 255) 1px, transparent 1px);
+
+    background-size:50px 50px;
+
+    opacity:0.15;
+
+    z-index:0;
+}
+
+/* MAIN AREA */
+
+/*.garden{
+    position:relative;
+    width:100%;
+    height:100vh;
+}*/
+
+/* MOON */
+
+.moon{
+    position:absolute;
+
+    top:100px;
+    right:30px;
+
+    width:260px;
+    height:280px;
+
+    animation:floatMoon 5s ease-in-out infinite;
+
+    
+}
+
+
+
+
+/* COMMON OBJECTS */
+
+.object{
+    position:absolute;
+
+    cursor:pointer;
+
+    transition:0.4s;
+
+    animation:float 4s ease-in-out infinite;
+}
+
+.object:hover{
+
+    transform:scale(1.15);
+
+    filter:
+    drop-shadow(0 0 15px #c570a5)
+    drop-shadow(0 0 25px rgb(187, 96, 187));
+}
+
+/* FIRST ROW */
+
+.dairy{
+    width:200px;
+    height:250px;
+    top:230px;
+    left:30px;
+}
+
+.letter{
+    width:210px;
+    height:280px;
+    top:440px;
+    left:220px;
+    
+}
+
+.camera{
+    width:200px;
+    height:200px;
+    top:280px;
+    left:430px;
+}
+
+.gift{
+    width:140px;
+    height:160px;
+    bottom:480px;
+    left:270px;
+}
+
+/* MIDDLE */
+
+.pig{
+    width:190px;
+    height:250px;
+
+    top:290px;
+
+    left:58%;
+
+    transform:translateX(-50%);
+}
+
+/* BOTTOM ROW */
+
+.star{
+    width:200px;
+    height:200px;
+
+    top:480px;
+
+    left:670px;
+}
+
+.balloon{
+    width:250px;
+    height:280px;
+    top:80px;
+
+   left:40%;
+
+    transform:translateX(-50%);
+}
+
+.butterfly{
+    width:350px;
+    height:400px;
+   bottom:350px;
+
+    right:300px;
+}
+
+/* HEART */
+
+.heart{
+    width:230px;
+    height:230px;
+
+    bottom:50px;
+
+    left:75%;
+
+    transform:translateX(-50%);
+}
+
+/* FLOAT */
+
+@keyframes float{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+}
+
+/* MOON */
+
+@keyframes floatMoon{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-20px);
+    }
+}
+
+/* POPUP */
+
+.popup{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.7);
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.4s;
+
+    z-index:100;
+}
+
+.popup.active{
+
+    opacity:1;
+
+    visibility:visible;
+}
+
+.popup-box{
+
+    width:500px;
+
+    max-width:90%;
+
+    padding:35px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.1);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    color:white;
+
+    text-align:center;
+
+    box-shadow:0 15px 50px rgba(0,0,0,.4);
+
+    animation:popup .4s;
+}
+
+.popup-box h2{
+
+    margin-bottom:20px;
+
+    font-size:32px;
+}
+
+.popup-box p{
+
+    line-height:30px;
+
+    color:#f3e9ff;
+}
+
+#close{
+
+    float:right;
+
+    font-size:30px;
+
+    cursor:pointer;
+}
+
+#close:hover{
+
+    color:#d387ba;
+}
+
+@keyframes popup{
+
+    from{
+        transform:scale(.7);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .moon{
+        width:90px;
+    }
+
+    .tree{
+        width:130px;
+        
+    }
+
+    .object{
+        width:55px !important;
+    }
+
+    .dairy{
+        top:50px;
+        left:30px;
+    }
+
+    .letter{
+        top:150px;
+        left:130px;
+    }
+
+    .camera{
+        top:150px;
+        left:230px;
+    }
+
+    .gift{
+        top:260px;
+        left:80px;
+    }
+
+    .pig{
+        top:360px;
+    }
+
+    .star{
+        top:480px;
+        left:70px;
+    }
+
+    .balloon{
+        top:470px;
+    }
+
+    .butterfly{
+        top:480px;
+        right:70px;
+    }
+
+    .heart{
+        bottom:80px;
+    }
+}
+.gallery{
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin:20px 0;
+}
+
+.gallery img{
+
+    width:180px;
+
+    height:220px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    box-shadow:0 0 20px rgba(255,255,255,.3);
+
+    transition:.3s;
+}
+
+.gallery img:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:0 0 30px pink;
+}
+
+audio{
+
+    width:90%;
+}

@@ -1,0 +1,693 @@
+/* ==========================================
+   GOOGLE FONTS
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Caveat:wght@700&display=swap');
+
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+
+    width:100%;
+    min-height:100%;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(
+        135deg,
+        #FFD7E6 0%,
+        #e6abab 30%,
+        #F2E6FF 65%,
+        #DDF5FF 100%
+    );
+
+    background-size:250% 250%;
+
+    animation:bgMove 12s ease infinite;
+
+    overflow-x:hidden;
+
+    padding:50px 30px 80px;
+
+    position:relative;
+
+}
+
+/* ==========================================
+   BACKGROUND ANIMATION
+========================================== */
+
+@keyframes bgMove{
+
+    0%{
+
+        background-position:0% 50%;
+
+    }
+
+    50%{
+
+        background-position:100% 50%;
+
+    }
+
+    100%{
+
+        background-position:0% 50%;
+
+    }
+
+}
+
+/* ==========================================
+   BLOBS
+========================================== */
+
+.background{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-10;
+
+    overflow:hidden;
+
+}
+
+.blob{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(130px);
+
+    opacity:.55;
+
+}
+
+.blob1{
+
+    width:420px;
+
+    height:420px;
+
+    background:#FFB7CF;
+
+    top:-130px;
+
+    left:-120px;
+
+}
+
+.blob2{
+
+    width:350px;
+
+    height:350px;
+
+    background:#D8CBFF;
+
+    right:-100px;
+
+    top:80px;
+
+}
+
+.blob3{
+
+    width:420px;
+
+    height:420px;
+
+    background:#FFE2AF;
+
+    bottom:-120px;
+
+    left:35%;
+
+}
+
+/* ==========================================
+   TITLE
+========================================== */
+
+.title{
+
+    text-align:center;
+
+    font-size:48px;
+
+    color:#4A3653;
+
+    margin-bottom:45px;
+
+    font-family:'Caveat',cursive;
+
+}
+
+/* ==========================================
+   BACK BUTTON
+========================================== */
+
+.back-btn{
+
+    position:fixed;
+
+    top:20px;
+
+    left:20px;
+
+    background:#222;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:10px 22px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    transition:.3s;
+
+    z-index:100;
+
+}
+
+.back-btn:hover{
+
+    background:black;
+
+    transform:translateY(-3px);
+
+}
+
+/* ==========================================
+   GALLERY
+========================================== */
+
+.gallery{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:45px;
+
+}
+/* ==========================================
+   POLAROID CARD
+========================================== */
+
+.polaroid{
+
+    background:#fff;
+
+    padding:14px 14px 24px;
+
+    border-radius:10px;
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.15);
+
+    transition:.4s ease;
+
+    position:relative;
+
+    transform:rotate(-2deg);
+
+}
+
+.polaroid:nth-child(even){
+
+    transform:rotate(2deg);
+
+}
+
+.polaroid:hover{
+
+    transform:translateY(-12px) rotate(0deg) scale(1.04);
+
+    box-shadow:
+        0 28px 60px rgba(0,0,0,.22);
+
+}
+
+/* ==========================================
+   PAPER SHADOW
+========================================== */
+
+.polaroid::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:15px;
+
+    right:15px;
+
+    bottom:-16px;
+
+    height:18px;
+
+    border-radius:50%;
+
+    background:rgba(0,0,0,.18);
+
+    filter:blur(12px);
+
+    z-index:-1;
+
+}
+
+/* ==========================================
+   VIDEO FRAME
+========================================== */
+
+.video-frame{
+
+    width:100%;
+
+    height:320px;
+
+    overflow:hidden;
+
+    border-radius:6px;
+
+    background:#111;
+
+}
+
+.video-frame video{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+/* ==========================================
+   LOCATION
+========================================== */
+
+.location{
+
+    margin-top:18px;
+
+    text-align:center;
+
+    font-family:'Caveat',cursive;
+
+    font-size:28px;
+
+    color:#5E5065;
+
+    letter-spacing:.5px;
+
+}
+
+/* ==========================================
+   LITTLE TAPE
+========================================== */
+
+.polaroid::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-12px;
+
+    left:50%;
+
+    transform:translateX(-50%) rotate(-3deg);
+
+    width:90px;
+
+    height:28px;
+
+    background:rgba(255,240,180,.55);
+
+    border-radius:4px;
+
+    box-shadow:
+        0 2px 5px rgba(0,0,0,.08);
+
+}
+
+/* ==========================================
+   FLOAT ANIMATION
+========================================== */
+
+.polaroid{
+
+    animation:floatCard 5s ease-in-out infinite;
+
+}
+
+.polaroid:nth-child(2){
+
+    animation-delay:.6s;
+
+}
+
+.polaroid:nth-child(3){
+
+    animation-delay:1.2s;
+
+}
+
+.polaroid:nth-child(4){
+
+    animation-delay:1.8s;
+
+}
+
+.polaroid:nth-child(5){
+
+    animation-delay:2.4s;
+
+}
+
+@keyframes floatCard{
+
+    0%,100%{
+
+        transform:translateY(0) rotate(-2deg);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px) rotate(-1deg);
+
+    }
+
+}
+
+.polaroid:nth-child(even){
+
+    animation-name:floatCardEven;
+
+}
+
+@keyframes floatCardEven{
+
+    0%,100%{
+
+        transform:translateY(0) rotate(2deg);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px) rotate(1deg);
+
+    }
+
+}
+/* ==========================================
+   PAGE FADE
+========================================== */
+
+body{
+
+    animation:fadePage .8s ease;
+
+}
+
+@keyframes fadePage{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.98);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* ==========================================
+   SPARKLES
+========================================== */
+
+.background::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+        radial-gradient(rgba(255,255,255,.85) 1px, transparent 1px);
+
+    background-size:70px 70px;
+
+    opacity:.35;
+
+    animation:twinkle 6s infinite;
+
+}
+
+@keyframes twinkle{
+
+    0%,100%{
+
+        opacity:.2;
+
+    }
+
+    50%{
+
+        opacity:.5;
+
+    }
+
+}
+
+/* ==========================================
+   EXTRA GLOW
+========================================== */
+
+.background::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+
+    height:500px;
+
+    border-radius:50%;
+
+    background:#FFD6EA;
+
+    filter:blur(180px);
+
+    right:-120px;
+
+    bottom:-120px;
+
+    opacity:.35;
+
+}
+
+/* ==========================================
+   TITLE ANIMATION
+========================================== */
+
+.title{
+
+    animation:titleFloat 4s ease-in-out infinite;
+
+}
+
+@keyframes titleFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-5px);
+
+    }
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:900px){
+
+    .gallery{
+
+        grid-template-columns:1fr;
+
+        max-width:330px;
+
+    }
+
+    .title{
+
+        font-size:38px;
+
+    }
+
+    .video-frame{
+
+        height:270px;
+
+    }
+
+}
+
+@media(max-width:500px){
+
+    body{
+
+        padding:70px 18px 50px;
+
+    }
+
+    .title{
+
+        font-size:32px;
+
+    }
+
+    .location{
+
+        font-size:24px;
+
+    }
+
+    .video-frame{
+
+        height:230px;
+
+    }
+
+    .back-btn{
+
+        padding:8px 18px;
+
+        font-size:13px;
+
+    }
+
+}
+
+/* ==========================================
+   SMOOTH SCROLL
+========================================== */
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#FCEAF4;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#F5AFCB;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#EC8FB5;
+
+}
+
+/* ==========================================
+   HOVER GLOW
+========================================== */
+
+.polaroid:hover .location{
+
+    color:#D45C8A;
+
+    transition:.3s;
+
+}
+
+.polaroid:hover video{
+
+    transform:scale(1.05);
+
+    transition:.5s ease;
+
+}
+
+/* ==========================================
+   VIDEO
+========================================== */
+
+.video-frame video{
+
+    transition:.5s ease;
+
+}
+
+/* ==========================================
+   END
+========================================== */
