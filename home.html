@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+
+<body>
+
+<div class="garden">
+
+    <img src="{{ url_for('static', filename='icons/dairy.png') }}"
+     class="object dairy"
+     onclick="window.location.href='/dairy'">
+
+     <img src="{{ url_for('static', filename='icons/star.png') }}"
+     class="object star"
+      onclick="window.location.href='/star'">
+
+     
+
+     <img src="{{ url_for('static', filename='icons/balloon.png') }}"
+     class="object balloon"
+      onclick="window.location.href='/musicbox'">
+
+     <img src="{{ url_for('static', filename='icons/moon.png') }}"
+     class="object moon"
+     onclick="window.location.href='/moon'">
+
+     <img src="{{ url_for('static', filename='icons/gift.png') }}"
+     class="object gift"
+     onclick="window.location.href='/gift'">
+
+     <img src="{{ url_for('static', filename='icons/butterfly.png') }}"
+     class="object butterfly"
+      onclick="window.location.href='/butterfly'">
+
+     <img src="{{ url_for('static', filename='icons/camera.png') }}"
+     class="object camera"
+      onclick="window.location.href='/camera'">
+
+     <img src="{{ url_for('static', filename='icons/letter.png') }}"
+     class="object letter"
+      onclick="window.location.href='/letter'">
+
+     <img src="{{ url_for('static', filename='icons/pig.png') }}"
+     class="object pig"
+      onclick="window.location.href='/funny'">
+
+     <img src="{{ url_for('static', filename='icons/heart.png') }}"
+     class="object heart"
+     onclick="window.location.href='/heart'">
+
+
+</div>
+
+<div id="popup" class="popup">
+
+    <div class="popup-box">
+
+        <span id="close">&times;</span>
+
+        <h2 id="popupTitle">Title</h2>
+
+        <p id="popupText">
+            Content Here
+        </p>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/home.js') }}"></script>
+
+</body>
+</html>

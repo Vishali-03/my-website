@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fun</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/moon.css') }}">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="container">
+
+    <h1>Panni Eli 🐷🐭</h1>
+
+    <p>Next time oru nalla photo edupom 😭</p>
+
+    <div class="gallery">
+
+        <!-- PHOTO 1 -->
+
+        <div class="polaroid">
+
+            <img src="{{ url_for('static', filename='icons/moon4.jpeg') }}">
+
+            <span>29/3/2026</span>
+
+        </div>
+
+       
+        <!-- VIDEO 1 -->
+
+        <div class="polaroid">
+
+            <video autoplay muted loop playsinline>
+
+                <source src="{{ url_for('static', filename='icons/moon5.mp4') }}"
+                        type="video/mp4">
+
+            </video>
+
+            <span>. . .</span>
+
+        </div>
+
+        <!-- VIDEO 2 -->
+
+        <div class="polaroid">
+
+            <video autoplay muted loop playsinline>
+
+                <source src="{{ url_for('static', filename='icons/moon1.mp4') }}"
+                        type="video/mp4">
+
+            </video>
+
+            <span>13/12/2025</span>
+
+        </div>
+
+        <!-- VIDEO 3 -->
+
+        <div class="polaroid">
+
+            <video autoplay muted loop playsinline>
+
+                <source src="{{ url_for('static', filename='icons/moon6.mp4') }}"
+                        type="video/mp4">
+
+            </video>
+
+            <span>. . .</span>
+
+        </div>
+
+        <!-- VIDEO 4 -->
+
+        <div class="polaroid">
+
+            <video autoplay muted loop playsinline>
+
+                <source src="{{ url_for('static', filename='icons/moon2.mp4') }}"
+                        type="video/mp4">
+
+            </video>
+
+            <span>1/12/2025</span>
+
+        </div>
+         <!-- PHOTO 2 -->
+
+        <div class="polaroid">
+
+            <img src="{{ url_for('static', filename='icons/moon8.jpeg') }}">
+
+            <span>. . .</span>
+
+        </div>
+
+
+        <!-- VIDEO 5 -->
+
+        <div class="polaroid">
+
+            <video autoplay muted loop playsinline>
+
+                <source src="{{ url_for('static', filename='icons/moon3.mp4') }}"
+                        type="video/mp4">
+
+            </video>
+
+            <span>18/9/2025</span>
+
+        </div>
+
+        <!-- VIDEO 6 -->
+
+        <div class="polaroid">
+
+            <video autoplay muted loop playsinline>
+
+                <source src="{{ url_for('static', filename='icons/moon7.mp4') }}"
+                        type="video/mp4">
+
+            </video>
+
+            <span>. . .</span>
+
+        </div>
+
+    </div>
+
+    <a href="/home" class="backBtn">
+
+        ← Back 
+
+    </a>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/moon.js') }}"></script>
+
+</body>
+
+</html>

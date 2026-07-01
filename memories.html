@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Our Memories</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/memories.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <a href="/home" class="back">⬅ Back</a>
+
+    <h1>Boom!!! ❤️</h1>
+
+    <audio controls autoplay loop>
+        <source src="{{ url_for('static',
+        filename='music/song.mp3') }}">
+    </audio>
+
+    <div class="gallery">
+
+        <img src="{{ url_for('static',
+        filename='icons/photo1.jpeg') }}"
+        class="object camera">
+
+        <img src="{{ url_for('static',
+        filename='icons/photo2.jpeg') }}"
+        class="object camera">
+
+        <img src="{{ url_for('static',
+        filename='icons/photo3.jpeg') }}"
+        class="object camera">
+
+    </div>
+
+</div>
+
+</body>
+</html>

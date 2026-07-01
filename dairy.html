@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Diary</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/dairy.css') }}">
+
+</head>
+
+<body>
+
+    <!-- Background -->
+
+    <div class="background"></div>
+
+    <!-- Back Button -->
+
+    <a href="{{ url_for('home') }}" class="back-btn">
+        ← Back
+    </a>
+
+    <!-- Title -->
+
+    <h1 class="title">
+        Kutty Kavidhai.
+    </h1>
+
+    <!-- Diary -->
+
+    <div class="diary">
+
+        <!-- PAGE 1 -->
+
+        <div class="page active">
+
+            <h1></h1>
+
+            <h2>Panni Kuttyyyyy~</h2>
+
+            <h3></h3>
+
+            <p>
+
+                Pudhusa ezhudhura alavuku enaku moola illa, so na unaku already ezhudhi whatsapp la anupuna content dha irukum ulla .<br> Adhavadhu unmai ah sollanum ah adutha 4 slide konjam cringe ah iruka podhu.<br>Hehehehe
+            
+
+            </p>
+
+        </div>
+
+        <!-- PAGE 2 -->
+
+        <div class="page">
+
+            
+
+            <p>
+
+               Pesum nimidangal kuraindhu ponalum 
+Pesiya ninaivugal maraindhu povadhu illai.
+
+                <br><br>
+
+                Aayiram natchathirangal vaanil irundhalum, Kangal theduvathu nilavai dhaan, 
+Athu pola, aayiram manidhargal vaazhkaiyil kadanthalum, Nan theduvadhu unnai mattum dhaan ...
+
+            </p>
+
+        </div>
+
+        <!-- PAGE 3 -->
+
+        <div class="page">
+
+            
+
+           <p>Alaigal pola dhaan nee enaku ...
+Thedi sellum ovvoru nodiyum edho maatram nadakkiradhu, Adhu veliyil theriyaamal ponaalum, ullukkul aazhamaga padhindhu vidugiradhu ...
+<br>Karayai meendum meendum thedum alai pola, En manamum unnai thedi konde dhaan irukum, En endru vilakkam theriyadhu, aanal andha dhisai maatum eppozhudhum maaradhu.<br><br>Enaku romba pudicha lines bro idhu.</p>
+
+        </div>
+
+        <!-- PAGE 4 -->
+
+        <div class="page">
+
+           
+
+            <p>
+
+                
+
+                En vazhkai puthagathil, Thirumba thirumba padikka thonum andha azhagaana pakkam nee. <br><br>
+
+"ஒரு சாதாரண சந்திப்பு அழகான உறவாய் மாறியது!!!"
+
+            </p>
+
+        </div>
+
+        <!-- PAGE 5 -->
+
+        <div class="page">
+
+            <h2>Boi Boiiii</h2>
+
+            <p>
+
+               Varta mame durrrrrrrrrrr.
+
+            </p>
+
+            
+
+        </div>
+
+    </div>
+
+    <!-- Controls -->
+
+    <div class="controls">
+
+        <button id="prevBtn">
+
+            ⬅ Previous
+
+        </button>
+
+        <button id="nextBtn">
+
+            Next ➜
+
+        </button>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/dairy.js') }}"></script>
+
+</body>
+
+</html>

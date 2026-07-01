@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Letter</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/letter.css') }}">
+
+</head>
+
+<body>
+
+    <!-- Background -->
+    <div class="background"></div>
+
+    <!-- Floating Particles -->
+    <div class="particles"></div>
+
+    <!-- Warm Light -->
+    <div class="light"></div>
+
+    <!-- Back Button -->
+    <a href="/home" class="back-btn">
+        ← Back
+    </a>
+
+    <!-- Letter -->
+
+    <div class="letter-card">
+
+        
+
+        <h3>
+            Mukkiya Seidhi ...
+        </h3>
+
+        <h1>
+             Panni Kutty ❤️
+        </h1>
+
+        <!-- Scrollable Letter -->
+
+        <div class="letter-body">
+
+            <p id="typing">
+                Enaku nee panra chinna chinna vishiyathula irundhu ellame pudikum. Summa ore oru incident mattum solren ok ya. Election ku munnadi naal night uh na unaku 11:18 pola avlo vm anupuna, andha nerathuku nee adha ketutu summa reply pannitu kooda poi irukalaam, aana 11:30 call ku panni 1:00 varaikum call la dha irundha, ithanaikum na edhum pesa kooda illa. Na unna thoonga sonna apa kooda, nee ipdi iruka apa na epdi poi thoonguradhu apdi nu sonna. Adhu mattum illama, nee innoru vishiyamum sonna like na unna hema maari paathukalanaalum, na unna lathika maari paathukuren apdi nu. Enaku apa adhuku enna react panradhu nu therla, aana aprom yosichi paakura apa oru maari romba happy ah feel aachu... 
+                Love you brooooo ...
+
+            <div class="quote">
+
+                "Some souls leave footprints in our hearts forever."
+
+            </div>
+
+            <div class="signature">
+
+                
+
+                <br>
+
+                <span>Eli(Sali) 🐭</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Background Music -->
+
+    <audio id="bgMusic" loop>
+
+        <source src="{{ url_for('static', filename='music/song1.mp3') }}" type="audio/mpeg">
+
+    </audio>
+
+    <!-- Music Button -->
+
+    <button id="musicBtn">
+        🎵
+    </button>
+
+    <script src="{{ url_for('static', filename='js/letter.js') }}"></script>
+
+</body>
+
+</html>

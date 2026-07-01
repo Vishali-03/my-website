@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gift</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Caveat:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/gift.css') }}">
+
+</head>
+
+<body>
+
+    <!-- Background -->
+
+    <div class="background">
+
+        <div class="blob blob1"></div>
+
+        <div class="blob blob2"></div>
+
+        <div class="blob blob3"></div>
+
+    </div>
+
+    <!-- Back Button -->
+
+    <a href="{{ url_for('home') }}" class="back-btn">
+        ← Back
+    </a>
+
+    <!-- Heading -->
+
+    <h1 class="title">
+        Seekiram Scratch pannu 👺
+    </h1>
+
+    <!-- Scratch Card -->
+
+    <div class="card-container">
+
+        <div class="scratch-card">
+
+            <!-- Hidden Content -->
+
+            <div class="hidden-content">
+
+                <h2>Congratulations!</h2>
+
+                
+
+                <p>
+
+                    You have been randomly selected to buy me hot wheels. <br> Rendu moonu car vaangi kudutha kooda paravala, na edhum solla maaten.
+
+                    <br><br>
+
+                    <span>
+                        Hehehe . . . 
+                    </span>
+
+                </p>
+
+            </div>
+
+            <!-- Scratch Canvas -->
+
+            <canvas id="scratchCanvas"></canvas>
+
+        </div>
+
+    </div>
+
+    <!-- Reveal Button -->
+
+    <button id="continueBtn">
+
+        Continue ❤️
+
+    </button>
+
+    <!-- Hearts -->
+
+    <div id="hearts"></div>
+
+    <script src="{{ url_for('static', filename='js/gift.js') }}"></script>
+
+</body>
+
+</html>

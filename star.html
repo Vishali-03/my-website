@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Make A Wish ✨</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/star.css') }}">
+
+</head>
+
+<body>
+
+    <!-- Back Button -->
+
+    <a href="{{ url_for('home') }}" class="back-btn">
+    ⬅ Back
+</a>
+
+    <!-- Night Sky -->
+
+    <div class="sky">
+
+        <!-- Moon -->
+
+        <div class="moon"></div>
+
+        <!-- Clouds -->
+
+        <div class="cloud cloud1"></div>
+        <div class="cloud cloud2"></div>
+        <div class="cloud cloud3"></div>
+
+        <!-- Small Stars -->
+
+        <div class="star s1"></div>
+        <div class="star s2"></div>
+        <div class="star s3"></div>
+        <div class="star s4"></div>
+        <div class="star s5"></div>
+        <div class="star s6"></div>
+        <div class="star s7"></div>
+        <div class="star s8"></div>
+        <div class="star s9"></div>
+        <div class="star s10"></div>
+        <div class="star s11"></div>
+        <div class="star s12"></div>
+
+        <!-- Shooting Star -->
+
+        <div id="shootingStar">
+
+            ✨
+
+        </div>
+
+        <!-- Intro -->
+
+        <div class="intro">
+
+            <h1>Make A Wish</h1>
+
+            <p>
+
+                Click the shooting star...
+
+                <br><br>
+
+                Close your eyes,
+
+                make a wish,
+
+                and send it to the universe.
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- Wish Popup -->
+
+    <div id="wishPopup">
+
+        <div class="popup">
+
+            <h2>🌠 Make A Wish</h2>
+
+            <textarea
+
+                id="wishInput"
+
+                placeholder="Write your wish here...">
+
+            </textarea>
+
+            <button id="sendWish">
+
+                Send To The Stars ✨
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Final Message -->
+
+    <div id="finalMessage">
+
+        <h2>
+
+            🌌
+
+        </h2>
+
+        <p id="messageText">
+
+        </p>
+
+    </div>
+
+    <!-- Background Music (Optional) -->
+
+    <!--
+    <audio id="bgMusic" autoplay loop>
+
+        <source src="{{ url_for('static',
+        filename='music/wish.mp3') }}">
+
+    </audio>
+    -->
+
+    <script src="{{ url_for('static',
+    filename='js/star.js') }}"></script>
+
+</body>
+
+</html>

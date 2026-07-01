@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Memory Music Box</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Great+Vibes&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/musicbox.css') }}">
+
+</head>
+
+<body>
+
+    <!-- Background -->
+
+    <div class="background"></div>
+
+    <div class="stars"></div>
+
+    <div class="particles"></div>
+
+    <!-- Back Button -->
+
+    <a href="/home" class="back-btn">
+
+        ← Back
+
+    </a>
+
+    <!-- Music Box -->
+
+    <div class="music-box">
+
+        <!-- Lid -->
+
+        <div class="lid">
+
+            <h1>
+
+                MusicBox
+
+            </h1>
+
+            <p>
+
+                Top 5 songs
+
+            </p>
+
+        </div>
+
+        <!-- Inside -->
+
+        <div class="inside">
+
+            <!-- Vinyl -->
+
+            <div class="vinyl-area">
+
+                <div class="vinyl">
+
+                    <div class="center"></div>
+
+                </div>
+
+            </div>
+
+            <!-- Memory Buttons -->
+
+            <div class="songs">
+
+                <button class="song active"
+                    data-song="song2.mp3">
+
+                   Our fav song
+
+                </button>
+
+                <button class="song"
+                    data-song="song.mp3">
+
+                    your fav
+
+                </button>
+
+                <button class="song"
+                    data-song="song3.mp3">
+
+                    My fav
+
+                </button>
+
+                <button class="song"
+                    data-song="song4.mp3">
+
+                    Swim
+
+                </button>
+
+                <button class="song"
+                    data-song="song5.mp3">
+
+                    BTS
+
+                </button>
+
+            </div>
+
+            <!-- Controls -->
+
+            <div class="controls">
+
+                <button id="prev">
+
+                    ⏮
+
+                </button>
+
+                <button id="play">
+
+                    ▶
+
+                </button>
+
+                <button id="next">
+
+                    ⏭
+
+                </button>
+
+            </div>
+
+            <!-- Progress -->
+
+            <div class="progress">
+
+                <div class="progress-bar"></div>
+
+            </div>
+
+            <!-- Quote -->
+
+            <div class="quote">
+
+                "Music is the shortest path back to a beautiful memory."
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Audio -->
+
+    <audio id="audio">
+
+        <source src="{{ url_for('static', filename='music/song.mp3') }}">
+
+
+    </audio>
+
+    <script src="{{ url_for('static', filename='js/musicbox.js') }}"></script>
+
+</body>
+
+</html>

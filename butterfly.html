@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Find The Butterfly</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/butterfly.css') }}">
+
+</head>
+
+<body>
+
+    <!-- Animated Background -->
+
+    <div class="background">
+
+        <div class="moon"></div>
+
+        <div class="stars"></div>
+
+        <div class="cloud cloud1"></div>
+
+        <div class="cloud cloud2"></div>
+
+        <div class="cloud cloud3"></div>
+
+        <div class="particles"></div>
+
+        <div class="grass"></div>
+
+    </div>
+
+    <!-- Back -->
+
+    <a href="/home" class="back-btn">
+
+        ← Back
+
+    </a>
+
+    <!-- Main -->
+
+    <div class="game-container">
+
+        <h1>Find The Butterfly</h1>
+
+        <p class="subtitle">
+
+            Watch carefully... Remember the butterfly's jar before it gets shuffled.
+
+        </p>
+
+        <button id="startBtn">
+
+            🦋 Start Shuffle
+
+        </button>
+
+        <div class="jar-area">
+
+            <!-- Jar 1 -->
+
+            <div class="jar" data-index="0">
+
+                <div class="lid"></div>
+
+                <div class="glass">
+
+                    <div class="shine"></div>
+
+                    <div class="butterfly">
+
+                        🦋
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Jar 2 -->
+
+            <div class="jar" data-index="1">
+
+                <div class="lid"></div>
+
+                <div class="glass">
+
+                    <div class="shine"></div>
+
+                    <div class="butterfly">
+
+                        🦋
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Jar 3 -->
+
+            <div class="jar" data-index="2">
+
+                <div class="lid"></div>
+
+                <div class="glass">
+
+                    <div class="shine"></div>
+
+                    <div class="butterfly">
+
+                        🦋
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="result"></div>
+
+        <button id="playAgain">
+
+            🔄 Play Again
+
+        </button>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/butterfly.js') }}"></script>
+
+</body>
+
+</html>

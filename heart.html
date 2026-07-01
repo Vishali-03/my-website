@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Memories</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Caveat:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/heart.css') }}">
+
+</head>
+
+<body>
+
+<div class="background">
+
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+
+</div>
+
+<a href="{{ url_for('home') }}" class="back-btn">← Back</a>
+
+<h1 class="title">📍Bus</h1>
+
+<div class="gallery">
+
+    <!-- Card 1 -->
+
+    <div class="polaroid">
+
+        <div class="video-frame">
+
+            <video autoplay muted loop playsinline>
+
+                <source src="{{ url_for('static', filename='icons/heart1.mp4') }}" type="video/mp4">
+
+            </video>
+
+        </div>
+
+        <p class="location">
+             4/12/2025  <br>4:10 pm
+        </p>
+        
+
+    </div>
+
+    <!-- Card 2 -->
+
+    <div class="polaroid">
+
+        <div class="video-frame">
+
+            <video autoplay muted loop playsinline>
+
+                <source src="{{ url_for('static', filename='icons/heart2.mp4') }}" type="video/mp4">
+
+            </video>
+
+        </div>
+
+        <p class="location">
+            27/1/2026<br>4:20 pm
+        </p>
+
+    </div>
+
+    <!-- Card 3 -->
+
+    <div class="polaroid">
+
+        <div class="video-frame">
+
+            <video autoplay muted loop playsinline>
+
+                <source src="{{ url_for('static', filename='icons/heart3.mp4') }}" type="video/mp4">
+
+            </video>
+
+        </div>
+
+        <p class="location">
+            14/2/2026<br>3:59 pm
+        </p>
+
+    </div>
+
+    <!-- Card 4 -->
+
+    <div class="polaroid">
+
+        <div class="video-frame">
+
+            <video autoplay muted loop playsinline>
+
+                <source src="{{ url_for('static', filename='icons/heart4.mp4') }}" type="video/mp4">
+
+            </video>
+
+        </div>
+
+        <p class="location">
+            2/2/2026<br>7:54 am
+        </p>
+
+    </div>
+
+   
+
+</div>
+
+<script src="{{ url_for('static', filename='js/heart.js') }}"></script>
+
+</body>
+
+</html>

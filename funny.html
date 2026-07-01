@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>FUN!</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static',
+    filename='css/funny.css') }}">
+
+</head>
+
+<body>
+
+<a href="/home" class="back">⬅ Back</a>
+
+<h1> Hehehe 😂</h1>
+
+<p>
+    
+</p>
+
+<div class="gallery">
+
+    <img src="{{ url_for('static',
+    filename='icons/photo4.jpeg') }}"
+     class="object pig"
+     onclick="window.location.href='/funny'">
+
+    <img src="{{ url_for('static',
+    filename='icons/photo5.jpeg') }}"
+    class="object pig"
+    onclick="window.location.href='/funny'">
+
+    <img src="{{ url_for('static',
+    filename='icons/photo6.jpeg') }}"
+    class="object pig"
+    onclick="window.location.href='/funny'">
+
+</div>
+
+<div class="videos">
+
+    <video controls>
+        <source src="{{ url_for('static',
+        filename='icons/funny1.mp4') }}"
+        class="object pig"
+        onclick="window.location.href='/funny'">
+    </video>
+
+    <video controls>
+        <source src="{{ url_for('static',
+        filename='icons/funny2.mp4') }}"
+        class="object pig"
+        onclick="window.location.href='/funny'">
+    </video>
+    <video controls>
+        <source src="{{ url_for('static',
+        filename='icons/funny3.mp4') }}"
+        class="object pig"
+        onclick="window.location.href='/funny'">
+    </video>
+
+</div>
+
+<script src="{{ url_for('static',
+filename='js/funny.js') }}"></script>
+
+</body>
+</html>
